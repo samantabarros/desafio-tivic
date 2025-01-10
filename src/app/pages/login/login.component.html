@@ -1,1 +1,23 @@
-<app-login-layout btnLogin="Entrar"></app-login-layout>
+<app-login-layout btnLogin="Entrar" (submit)="submit()">
+    <form [formGroup]="loginForm">
+        <app-default-input 
+            inputName="email" 
+            type="email" 
+            label="Usuário" 
+            placeholder="admin@gmail.com"
+            formControlName="email"
+        >
+            <img src="/assets/svg/email.svg"/>
+        </app-default-input>
+        <app-default-input
+            inputName="password" 
+            type="password" 
+            label="Senha" 
+            placeholder="***********"
+            formControlName="password"
+        >
+            <img src="/assets/svg/password.svg"/>
+        </app-default-input>
+        <span>Esqueceu a senha?</span>
+    </form>
+</app-login-layout>

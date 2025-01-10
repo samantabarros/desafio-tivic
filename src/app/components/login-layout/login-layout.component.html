@@ -1,9 +1,9 @@
 <main>
     <section class="form-section">
-        <img src="assets/svg/logo.svg" alt="Logo" />
+        <img src="../../../assets/svg/logo.svg" alt="Logo" />
         <ng-content></ng-content>
         <div class="btn-wrapper">
-            <button class="btn-login">{{btnLogin}}</button>
+            <button class="btn-login"  (click)="submit()">{{btnLogin}}</button>
         </div>
         <div class="logo-tivic">
             <img src="assets/Tivic.png" alt="Logo Tivic" />
