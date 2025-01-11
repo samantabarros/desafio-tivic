@@ -7,10 +7,18 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './login-layout.component.scss'
 })
 export class LoginLayoutComponent {
-  @Input() btnLogin: string = "";
+  @Input() title: string="";
+  @Input() btnLoginText: string = "";
+  @Input() btnCadastroText: string="";
+  @Input() disableBtn: boolean = true;
   @Output("submit") onSubmit = new EventEmitter();
-
+  @Output("navigate") onNavigate = new EventEmitter();
+  
   submit(){
     this.onSubmit.emit();
+  }
+
+  navigate(){
+    this.onNavigate.emit();
   }
 }

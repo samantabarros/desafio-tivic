@@ -1,15 +1,23 @@
 <main>
     <section class="form-section">
         <img src="../../../assets/svg/logo.svg" alt="Logo" />
+        <h2>{{title}}</h2>
         <ng-content></ng-content>
         <div class="btn-wrapper">
-            <button class="btn-login"  (click)="submit()">{{btnLogin}}</button>
+            <button class="btn-login"  (click)="submit()" [disabled]="disableBtn">{{btnLoginText}}</button>
+            <div class="divider">
+                <div></div>
+                <span>ou</span>
+                <div></div>
+            </div>
+            <button class="btn-cadastro" (click)="navigate()" >{{btnCadastroText}}</button>
         </div>
-        <div class="logo-tivic">
-            <img src="assets/Tivic.png" alt="Logo Tivic" />
-        </div>
+      
     </section>
     <section class="main-section">
-        <img src="assets/etilometro.svg" alt="Ilustração" />
+        <img src="/src/assets/svg/avatar.svg" alt="Ilustração" />
+        <div class="logo-tivic">
+            <img src="/src/assets/png/Tivic.png" alt="Logo Tivic" />
+        </div>
     </section>
 </main>
