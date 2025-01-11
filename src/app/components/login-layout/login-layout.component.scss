@@ -18,29 +18,30 @@ main {
     .main-section {
         flex-grow: 1;
         background-color: #F1F3F6;
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
 
-        img{
+        img {
 
             max-width: 100%;
             max-height: 100%;
-       
+
         }
 
-        .logo-tivic{
+        .logo-tivic {
             margin: 30px 0 26px;
         }
     }
 
     .form-section {
         flex-grow: 0.7;
-        padding: 0 70px;
+        padding: 0 30px;
 
         img {
             margin-bottom: 30px;
         }
+
         h2 {
             font-size: 18px;
             font-weight: bold;
@@ -87,19 +88,34 @@ main {
                     opacity: 0.5;
                 }
 
-                &.btn-login{
+                &.btn-login {
                     background-color: $primary-color;
                     color: white;
                     box-shadow: 0px 8px 12px rgba(148.23004603385925, 64.33935597538948, 255, 0.20000000298023224);
 
                 }
-                &.btn-cadastro{
+
+                &.btn-cadastro {
                     border: 1px solid $primary-color;
                     color: $primary-color;
                 }
             }
-         }
+        }
 
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+    main {
+        .main-section {
+            display: flex !important;
+        }
+
+        .form-section {
+            padding: 0 70px;
+
+        }
     }
 
 }
