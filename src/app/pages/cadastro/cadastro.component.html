@@ -1,0 +1,39 @@
+<app-login-layout title="Cadastre-se agora" btnLoginText="Cadastrar" btnCadastroText="Login" (submit)="submit()" (navigate)="navigate()" [disableBtn]="!cadastroForm.valid">
+    <form [formGroup]="cadastroForm">
+        <app-default-input 
+        inputName="name" 
+        type="text" 
+        label="Nome" 
+        placeholder="Seu nome"
+        formControlName="name"
+    >
+        <img src="/src/assets/svg/user.svg"/>
+    </app-default-input>
+        <app-default-input 
+            inputName="email" 
+            type="email" 
+            label="Email" 
+            placeholder="admin@gmail.com"
+            formControlName="email"
+        >
+            <img src="/src/assets/svg/email.svg"/>
+        </app-default-input>
+        <app-default-input
+            inputName="password" 
+            type="password" 
+            label="Senha" 
+            placeholder="***********"
+            formControlName="password"
+        >
+            <img src="/src/assets/svg/password.svg"/>
+        </app-default-input>
+        <app-default-input
+        inputName="passwordConfirm" 
+        type="password" 
+        label="Confirme sua senha" 
+        formControlName="passwordConfirm"
+    >
+        <img src="/src/assets/svg/password.svg"/>
+    </app-default-input>
+    </form>
+</app-login-layout>
