@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Administrador",
+      "email": "administrador@gmail.com",
+      "password": "administrador"
+    },
+    {
+      "id": "1",
+      "name": "Maria",
+      "email": "maria@gmail.com",
+      "password": "administrador"
+    },
+    {
+      "id": "f328",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "8ed1",
+      "email": "administrador@gmail.com",
+      "password": "administrador"
+    },
+    {
+      "id": "1e63",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "47f3",
+      "email": "fadvaic@gmail.com",
+      "password": "136t2647t274"
+    },
+    {
+      "id": "351f",
+      "name": "Samanta",
+      "email": "samanta@gmail.com",
+      "password": "samanta"
+    },
+    {
+      "id": "5144",
+      "name": "teste",
+      "email": "teste@gmail.com",
+      "password": "teste"
+    },
+    {
+      "id": "e6f7",
+      "name": "Luciana",
+      "email": "luciana@gmail.com",
+      "password": "luciiana"
+    }
+  ]
+}
