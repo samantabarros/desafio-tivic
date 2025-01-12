@@ -43,6 +43,6 @@ export class CadastroComponent {
   }
 
   navigate(){
-    this.router.navigate([""])
+    this.router.navigate(["/login"])
   }
 }
