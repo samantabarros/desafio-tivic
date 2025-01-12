@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { LoginResponse } from '../types/login-response.type';
 import { catchError, map, Observable, tap, throwError } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ import { catchError, map, Observable, tap, throwError } from 'rxjs';
 export class LoginService {
   apiUrl: string = "http://localhost:3000"
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private router: Router, private httpClient: HttpClient) {}
   
   login(email: string, password: string): Observable<any>{
     return this.httpClient.get<any[]>(this.apiUrl + "/users").pipe(
@@ -23,12 +24,13 @@ export class LoginService {
         return usuario;
       }),
       tap((usuario) => {
-        sessionStorage.setItem("auth-token", usuario.id)
+        sessionStorage.setItem("token", usuario.id)
         sessionStorage.setItem("username", usuario.name)
+        this.router.navigate([''])
       }),
       catchError((error) => {
         return throwError(() => new Error(error.message));
-      })
+      }),
     )
   }
 
@@ -39,6 +41,15 @@ export class LoginService {
           sessionStorage.setItem("user-name", usuario.name)
         })*/
     )
+  }
+
+  logado(){
+    return sessionStorage.getItem('token') ? true : false;
+  }
+
+  deslogar(){
+    sessionStorage.clear();
+    this.router.navigate(['login']);
   }
     
 }
