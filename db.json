@@ -50,5 +50,86 @@
       "email": "luciana@gmail.com",
       "password": "luciiana"
     }
-  ]
+  ],
+  "operacoes": [
+    {
+      "id": "1",
+      "nomeResponsavel": "João Silva",
+      "data": "2025-01-10",
+      "local": "Vitória da Conquista",
+      "veiculosUtilizados": [
+        {
+          "id": 101,
+          "placa": "ABC-1234",
+          "modelo": "Caminhão",
+          "ano": 2020
+        },
+        {
+          "id": 102,
+          "placa": "XYZ-5678",
+          "modelo": "Van",
+          "ano": 2018
+        }
+      ],
+      "status": "em_andamento"
+    },
+    {
+      "id": "2",
+      "nomeResponsavel": "Maria Oliveira",
+      "data": "2025-01-08",
+      "local": "Anagé",
+      "veiculosUtilizados": [
+        {
+          "id": 103,
+          "placa": "DEF-4321",
+          "modelo": "Carro",
+          "ano": 2019
+        }
+      ],
+      "status": "finalizada"
+    },
+    {
+      "id": "3",
+      "nomeResponsavel": "Carlos Souza",
+      "data": "2025-01-09",
+      "local": "Vitória da Conquista",
+      "veiculosUtilizados": [
+        {
+          "id": 104,
+          "placa": "GHI-8765",
+          "modelo": "Caminhão",
+          "ano": 2021
+        },
+        {
+          "id": 105,
+          "placa": "JKL-1122",
+          "modelo": "Moto",
+          "ano": 2022
+        }
+      ],
+      "status": "em_andamento"
+    },
+    {
+      "id": "6b88",
+      "responsavel": "Samanta",
+      "data": "2024-11-14T03:00:00.000Z",
+      "local": "Vitória da Conquista",
+      "veiculos": [
+        "Carro A",
+        "Carro B"
+      ],
+      "status": "Em andamento"
+    },
+    {
+      "id": "f052",
+      "responsavel": "Teste",
+      "data": "2024-11-14T03:00:00.000Z",
+      "local": "Vitória da Conquista",
+      "veiculos": [
+        "Carro A"
+      ],
+      "status": "Em andamento"
+    }
+  ],
+  "totalOperacoes": 3
 }

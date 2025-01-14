@@ -26,7 +26,7 @@ export class LoginService {
       tap((usuario) => {
         sessionStorage.setItem("token", usuario.id)
         sessionStorage.setItem("username", usuario.name)
-        this.router.navigate([''])
+        this.router.navigate(['/home'])
       }),
       catchError((error) => {
         return throwError(() => new Error(error.message));
