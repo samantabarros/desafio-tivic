@@ -1,59 +1,96 @@
 # DesafioTivic
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+Sistema simplificado de gerenciamento de operações de trânsito para Lei Seca.
 
-## Development server
+## 🛠️ Tecnologias Utilizadas
 
-To start a local development server, run:
+- [Angular](versão >= 17)
+- [TypeScript]
+- [RxJS]
+- [Angular Material]
 
-```bash
-ng serve
-```
+## 🚀 Funcionalidades
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Login
+- Cadastro de usuários
+- Adicionar Operações
+- Dashboard com informações quantitativas sobre as operações
 
-## Code scaffolding
+## 📦 Pré-requisitos
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+-Node.js
+-Angular CLI
 
-```bash
-ng generate component component-name
-```
+## 🖥️  Como rodar o projeto
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+Clone este repositório
 
 ```bash
-ng build
+git clone https://github.com/seu-usuario/desafio-tivic.git
+
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Entre no diretório do projeto
 
 ```bash
-ng test
+cd nome-do-projeto
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+Instale as dependências
 
 ```bash
-ng e2e
+npm install
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Para instalar ad dependências adicionais:
 
-## Additional Resources
+ngx-toast (para notificações):
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```bash
+npm install ngx-toastr --save
+```
+
+JSON Server (para simulação da API):
+
+Globalmente (opção mais comum):
+
+```bash
+npm install -g json-server
+```
+
+Localmente (no projeto):
+
+```bash
+npm install json-server --save-dev
+```
+
+Execute o JSON Server apontando para o arquivo db.json:
+
+```bash
+json-server --watch db.json --port 3000
+```
+
+Para criar os guardas de rotas, utilize os seguintes comandos:
+
+Para o guarda usuario-nao-autenticado (CanActivate)
+
+```bash
+ng g guard services/guards/usuario-nao-autenticado
+```
+Para o guarda usuario-autenticado (CanActivate):
+
+```bash
+ng g guard services/guards/usuario-autenticado
+```
+
+Instale a biblioteca Angular Material:
+
+```bash
+ng add @angular/material
+```
+
+Execute o projeto
+
+```bash
+npm start
+```
