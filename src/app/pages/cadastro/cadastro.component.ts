@@ -5,6 +5,7 @@ import { DefaultInputComponent } from '../../components/default-input/default-in
 import { LoginService } from '../../services/login.service';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
 
 interface CadastroForm {
   name: FormControl,
@@ -15,7 +16,7 @@ interface CadastroForm {
 
 @Component({
   selector: 'app-cadastro',
-  imports: [LoginLayoutComponent, ReactiveFormsModule, DefaultInputComponent],
+  imports: [LoginLayoutComponent, ReactiveFormsModule, DefaultInputComponent, MatIconModule],
   templateUrl: './cadastro.component.html',
   providers:[LoginService],
   styleUrl: './cadastro.component.scss'
@@ -25,7 +26,6 @@ export class CadastroComponent {
 
   constructor(private router: Router, private loginService: LoginService, private toastService: ToastrService){
     this.cadastroForm = new FormGroup({
-
       name: new FormControl('', [Validators.required, Validators.minLength(3)]),
       email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', [Validators.required, Validators.minLength(4)]),
@@ -39,7 +39,6 @@ export class CadastroComponent {
       error: () => this.toastService.error("Erro ao cadastrar usuário! Tente novamente.")
 
     })
-    console.log(this.cadastroForm.value);
   }
 
   navigate(){

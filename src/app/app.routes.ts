@@ -36,7 +36,7 @@ export const routes: Routes = [
                 component: OperacoesComponent
             },
             {
-                path:"adicionar",
+                path:"adicionar-operacao",
                 component: AdicionarOperacaoComponent
             },
         ]

@@ -5,6 +5,7 @@ import { DefaultInputComponent } from '../../components/default-input/default-in
 import { LoginService } from '../../services/login.service';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
 
 interface LoginForm {
   email: FormControl,
@@ -13,7 +14,7 @@ interface LoginForm {
 
 @Component({
   selector: 'app-login',
-  imports: [LoginLayoutComponent, ReactiveFormsModule, DefaultInputComponent],
+  imports: [LoginLayoutComponent, ReactiveFormsModule, DefaultInputComponent, MatIconModule],
   templateUrl: './login.component.html',
   providers:[LoginService],
   styleUrl: './login.component.scss'

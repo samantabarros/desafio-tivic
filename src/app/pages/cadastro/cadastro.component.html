@@ -6,9 +6,9 @@
         label="Nome" 
         placeholder="Seu nome"
         formControlName="name"
-    >
-        <img src="/src/assets/svg/user.svg"/>
-    </app-default-input>
+        >
+            <mat-icon>person</mat-icon>
+        </app-default-input>
         <app-default-input 
             inputName="email" 
             type="email" 
@@ -16,7 +16,8 @@
             placeholder="admin@gmail.com"
             formControlName="email"
         >
-            <img src="/src/assets/svg/email.svg"/>
+            <mat-icon>mail</mat-icon>
+
         </app-default-input>
         <app-default-input
             inputName="password" 
@@ -25,7 +26,8 @@
             placeholder="***********"
             formControlName="password"
         >
-            <img src="/src/assets/svg/password.svg"/>
+            <mat-icon>lock</mat-icon>
+
         </app-default-input>
         <app-default-input
         inputName="passwordConfirm" 
@@ -33,7 +35,8 @@
         label="Confirme sua senha" 
         formControlName="passwordConfirm"
     >
-        <img src="/src/assets/svg/password.svg"/>
+        <mat-icon>lock</mat-icon>
+
     </app-default-input>
     </form>
 </app-login-layout>

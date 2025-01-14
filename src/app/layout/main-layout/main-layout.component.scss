@@ -1,0 +1,20 @@
+.conteudo-page {
+  width: 80vh;
+  margin-top: 30px;
+  margin-left: 250px;
+  padding: 0px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+div {
+  display: flex;
+}
+
+.sidebar-hidden {
+  transform: translateX(-200px);
+}
+
+
+.sidebar-hidden+main.conteudo-page {
+  margin-left: 0;
+}
