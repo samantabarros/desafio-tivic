@@ -1,4 +1,4 @@
-# DesafioTivic
+# Desafio Tivic
 
 Sistema simplificado de gerenciamento de operações de trânsito para Lei Seca.
 
@@ -42,7 +42,7 @@ Instale as dependências
 npm install
 ```
 
-Para instalar ad dependências adicionais:
+Para instalar as dependências adicionais:
 
 ngx-toast (para notificações):
 
@@ -68,19 +68,6 @@ Execute o JSON Server apontando para o arquivo db.json:
 
 ```bash
 json-server --watch db.json --port 3000
-```
-
-Para criar os guardas de rotas, utilize os seguintes comandos:
-
-Para o guarda usuario-nao-autenticado (CanActivate)
-
-```bash
-ng g guard services/guards/usuario-nao-autenticado
-```
-Para o guarda usuario-autenticado (CanActivate):
-
-```bash
-ng g guard services/guards/usuario-autenticado
 ```
 
 Instale a biblioteca Angular Material:
